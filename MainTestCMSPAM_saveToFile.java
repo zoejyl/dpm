@@ -15,11 +15,9 @@ public class MainTestCMSPAM_saveToFile {
 
 	public static void main(String [] arg) throws IOException{    
 		// Load a sequence database
-		//String input = fileToPath("D1C20T20N0.5S6I5_SPMF.txt");
-       String input = fileToPath("sequence_group_1.txt");
-       //input = fileToPath("sequence_group_2.txt");
-       String output = ".//frequent_pattern_1.txt";
-       //String output = ".//frequent_pattern_2.txt";
+       String input = fileToPath("data_input_to_CMSPAM_highperformance.txt");
+       String output = ".//frequent_pattern_highperformance.txt";
+       //String output = ".//frequent_pattern_lowperformance.txt";
 		// Create an instance of the algorithm 
 		AlgoCMSPAM algo = new AlgoCMSPAM(); 
 		

@@ -38,25 +38,22 @@ def iSupport(pat,gap,seq_list):
 
 
 if __name__ == '__main__':
-	# low -left
-	# high -right
+	# low performance -left
+	# high performance -right
 	gap = 0
 	leftseqlist = []
-	filename = os.path.join( os.getcwd(), '..', 'seq_list_lowper1126.txt' )
-	with open(filename) as f1:
+	# sequence group 1
+	with open('sequence_group_lowperformance') as f1:
 		for line in f1:
 			leftseqlist.append(line.strip("\n"))
-
+	# sequence group 2
 	rightseqlist = []
-	filename2 = os.path.join( os.getcwd(), '..', 'seq_list_highper1126.txt' )
-	with open(filename2) as f2:
+	with open('sequence_group_highperformance') as f2:
 		for line in f2:
 			rightseqlist.append(line.strip("\n"))
-	operations = {'1':['a',1], '2':['b',2], '3':['c',3], '4': ['d',4], '5': ['e',5], '6': ['f',6], '7': ['g',7], '8': ['h',8], '9': ['i',9], '10': ['j',10], '11': ['k',11], "12": ['l',12], "13": ['m',13], '14': ['n',14], '15': ['o',15], '16': ['p',16], '17': ['q',17],'18':['r',18],'19':['s',19],'20':['t',20],'21':['u',21]}
-
+	# frequent pattern 1
 	leftfrepatlist = []
-	filename3 = os.path.join( os.getcwd(), '..', 'fre_pattern_lowper1126.txt' )
-	with open(filename3) as f3:
+	with open('frequent_pattern_lowperformance') as f3:
 		for line in f3:
 			temp = line.split("#SUP")[0].strip()
 			temp2 = temp.split(" -1")
@@ -64,10 +61,9 @@ if __name__ == '__main__':
 			for i in range(len(temp2)-1):
 				final+=temp2[i].strip()
 			leftfrepatlist.append(final)
-
+	# frequent pattern 2
 	rightfrepatlist = []
-	filename4 = os.path.join( os.getcwd(), '..', 'fre_pattern_highper1126.txt' )
-	with open(filename4) as f4:
+	with open('frequent_pattern_lowperformance') as f4:
 		for line in f4:
 			temp = line.split("#SUP")[0].strip()
 			temp2 = temp.split(" -1")

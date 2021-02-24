@@ -26,6 +26,7 @@ if __name__ == '__main__':
 				if int(row[1]) == 6: 
 					temp = 2
 				content_dict[row[0].strip()] = temp
+	# read in logs
 	data_df = pandas.read_csv('1121data_open_sequence.csv') 
 	data_dict = data_df.to_dict(orient = 'records')
 	log = {}
@@ -51,14 +52,14 @@ if __name__ == '__main__':
 	for key in log:
 		user_num += 1
 	print("number of user: ",user_num)
-	with open('processed_data_highper1126.txt', 'w') as f:
+	with open('data_input_to_CMSPAM_highperformance.txt', 'w') as f:
 		for s in dataset:
 			result = ""
 			for c in s:
 				result+= str(c)+" "+"-1 "
 			result+= "-2\n"
 			f.write(result)
-	with open('seq_list_highper1126.txt','w') as f:
+	with open('sequence_group_highperformance.txt','w') as f:
 		for s in dataset:
 			result = ""
 			for c in s:
