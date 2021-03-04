@@ -5,11 +5,10 @@ services:
     image: mysql:5.7
     volumes:
       - .data:/var/lib/mysql
-      - ./sql-init.sql:/sql-init.sql
     ports:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: sample
-      MYSQL_DATABASE: spm
+      MYSQL_DATABASE: dpm
       MYSQL_USER: root
 
